@@ -72,7 +72,7 @@ def do_login(context):
 
 @given('I have a friend list')
 def load_friend_list(context):
-    FRIENDS_TO_ADD_LIST = list(filter(lambda friend: not is_friend_already_added(friend), FRIENDS_TO_ADD_LIST))
+    assert len(FRIENDS_TO_ADD_LIST) > 0
 
 
 @then('add friends')
